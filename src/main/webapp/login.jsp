@@ -6,21 +6,24 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Login</title>
+    <%@ include file="partials/head.jsp"%>
 </head>
 <body>
+<%@ include file="partials/navbar.jsp"%>
 
-<h1>Login Page</h1>
-<form action="/login" method="post">
-    <label for="username">USERNAME:</label>
-    <input id="username" type="text"name="username" placeholder="Enter Username">
-    <label for="password">PASSWORD:</label>
-    <input id="password" type="text"name="password" placeholder="Enter password">
-
-    <button>Login</button>
+<form action="/login" method="POST">
+    <label for="login">User Login</label>
+    <input type="text" id="login" name="login" placeholder="username">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="password">
+    <button>Submit</button>
 </form>
+
+
 
 </body>
 </html>

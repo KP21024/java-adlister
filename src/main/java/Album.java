@@ -1,33 +1,33 @@
 import java.io.Serializable;
-import java.util.Date;
+import java.util.Calendar;
 
-public class Albums implements Serializable {
+public class Album implements Serializable {
 
-    private long id;
+    private int keyId;
     private String artist;
     private String name;
-    private Date release_date;
+    private Calendar releaseDate;
     private double sales;
     private String genre;
 
-    public Albums() {
+    public Album() {
     }
 
-    public Albums(long id, String artist, String name, Date release_date, double sales, String genre) {
-        this.id = id;
+    public Album(int keyId, String artist, String name, Calendar releaseDate, double sales, String genre) {
+        this.keyId = keyId;
         this.artist = artist;
         this.name = name;
-        this.release_date = release_date;
+        this.releaseDate = releaseDate;
         this.sales = sales;
         this.genre = genre;
     }
 
-    public long getId() {
-        return id;
+    public int getKeyId() {
+        return keyId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setKeyId(int keyId) {
+        this.keyId = keyId;
     }
 
     public String getArtist() {
@@ -46,12 +46,12 @@ public class Albums implements Serializable {
         this.name = name;
     }
 
-    public Date getRelease_date() {
-        return release_date;
+    public Calendar getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setRelease_date(Date release_date) {
-        this.release_date = release_date;
+    public void setReleaseDate(Calendar releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public double getSales() {

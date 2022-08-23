@@ -1,24 +1,23 @@
-import java.util.ArrayList;
-
 public class BeanTest {
 
     public static void main(String[] args) {
-        Author jackCarr = new Author(1,"Jack","Carr");
-        Author tomClancy = new Author(2, "Tom", "Clancy");
 
-        Quotes hemingway = new Quotes(1,"content", jackCarr);
-        Quotes twain = new Quotes(2, "content 2", tomClancy);
+        Album firstAlbum = new Album();
+        firstAlbum.setArtist("Queen");
+        firstAlbum.setGenre("rock");
+        firstAlbum.setName("Bohemian Rhapsody");
+        firstAlbum.setSales(10000000);
+//        firstAlbum.setReleaseDate();
 
-        Albums theWall = new Albums();
-        Albums killerQueen = new Albums();
+        Author johnGrisham = new Author();
+        johnGrisham.setFirstName("John");
+        johnGrisham.setLastName("Grisham");
+        johnGrisham.setAuthorId(1);
 
-        ArrayList<Quotes> quotes = new ArrayList<>();
-        quotes.add(hemingway);
-        quotes.add(twain);
-
-        for (Quotes quote: quotes) {
-            System.out.println(quote.getAuthor().getFirst_name() + " " + quote.getAuthor().getLast_name() + " " + quote.getContent());
-        }
+        Quote shakespeare = new Quote();
+        shakespeare.setAuthorId(2);
+        shakespeare.setQuoteId(1);
+        shakespeare.setContent("To be or not to be");
 
     }
 }
